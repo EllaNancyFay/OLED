@@ -14,8 +14,11 @@ board.on('ready', function() {
   };
 
   var oled = new Oled(board, five, opts);
-  oled.clearDisplay();
-  oled.setCursor(1, 1);
-  oled.writeString(font, 3, 'Hello World!', 3, true);
-  
+  oled.setCursor(50, 20);
+  oled.writeString(font, 6, 'O', 6, true);
+  oled.drawPixel([64, 15, 1]);
+  oled.fillRect(64, 5, 3, 10, 1);
+  oled.fillRect(56, 5, 3, 10, 1);
+  oled.fillRect(48, 5, 3, 10, 1);
+  oled.fillRect(64, 32, 5, 5, 1);
 });
